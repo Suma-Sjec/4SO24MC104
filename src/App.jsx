@@ -24,6 +24,15 @@ const fetchNumbers = async (type) => {
         default: 
             return { numbers: [] };
     }
+        try {
+        const response = await axios.get(url, { timeout: 500 });
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching numbers:', error);
+        return { numbers: [] };
+    }
+};
 
-  }
+
+
   export default fetchNumbers
