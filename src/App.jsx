@@ -26,3 +26,4 @@ const fetchNumbers = async (type) => {
     }
 
   }
+  export default fetchNumbers
